@@ -6,6 +6,8 @@ console.log(a,name,b,c,isbool,d);
 // operators
 console.log(5+5,5-4,5*5,5/3,5%2,5**3,5==5,5>3,5<3,5==='5',5===5,5!=4,5!==5,3<4 && 4>2,!true)
 //continonal statement
+
+
 /* if(condition){
 }else if(condition){
 }else{
