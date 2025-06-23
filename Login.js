@@ -1,38 +1,27 @@
-import React,{useState} from 'react';
-import './Login.css';
-import { Navigate,useNavigate } from 'react-router-dom';
+import React from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
-  const [username, setUsername] = useState('');
-  const navigate = useNavigate();
+const Login = () => {
+    const [username , setuserName] = useState("");
+    const navigate = useNavigate();
 
-  const handleUsernameChange = (event) =>{
-    setUsername(event.target.value);
-  }
-
-     const handleLogin = (e) => {
-    e.preventDefault();
-    // Simple login condition (replace with real auth logic)
-    if (username === 'admin') {
-      // Navigate to dashboard
-      navigate('/dashboard');
-    } else {
-      alert('Invalid credentials');
+    const handleSubmit=()=>{
+        if(username=="admin"){
+            navigate('/Dashboard');
+        }
+        else{
+            alert("Invalid Credintials");
+        }
     }
-  };
-
-  return (
-    <div >
-    <div className='Login-header'>
-      <h3 >Username</h3>
-      <input type='text' placeholder='Enter name' className='centerinput' onChange={handleUsernameChange}/>
-      
-      <button className='button' onSubmit={handleLogin} >Submit</button>
-      </div>
-      
     
+  return (
+    <div className='login'>
+        <h1>Login</h1>
+        <input type='text' placeholder='Enter your name' onChange={(e)=> setuserName(e.target.value)}></input>
+        <button onClick={handleSubmit} style={{marginLeft:'20px'}}>Submit</button>
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login
