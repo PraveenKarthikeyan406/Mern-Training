@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "685a5f84b3d925b9a4cf43ed"
+  },
+  "name": "PK",
+  "age": 19,
+  "city": "Chennai"
+},
+{
+  "_id": {
+    "$oid": "685a602fb3d925b9a4cf43ee"
+  },
+  "name": "PK",
+  "age": 18,
+  "city": "Madurai"
+},
+{
+  "_id": {
+    "$oid": "685a602fb3d925b9a4cf43ef"
+  },
+  "name": "MOCK",
+  "age": 22,
+  "city": "Chennai"
+}]
